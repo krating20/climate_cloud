@@ -1,6 +1,6 @@
 import xarray as xr
 # single file
-dataDIR = 'air.sfc.2016.nc'
+dataDIR = 'air.sfc.2015.nc'
 data = xr.open_dataset(dataDIR)
 df = data.to_dataframe()
 df = df.drop('Lambert_Conformal', axis=1)
@@ -15,7 +15,7 @@ df.drop(index_drop, inplace=True)
 print(df)
 df = df['air']
 print(df)
-df.to_csv('air.2016.csv', index=True)
+df.to_csv('air.2015.csv', index=True)
 #df = df.drop('Lambert_Conformal', axis=1)
 
 #df.to_csv('air.2019.csv', index=False, columns=['air'])
