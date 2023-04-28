@@ -2,7 +2,8 @@ import pandas as pd
 import xgboost as xgb
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, f1_score
-
+#from xgboost import plot_tree
+#import matplotlib.pyplot as plt
 # Load the CSV files for years 2015-2019 and 2022
 df_2015 = pd.read_csv('2015.csv')
 df_2016 = pd.read_csv('2016.csv')
@@ -54,3 +55,8 @@ accuracy_train = accuracy_score(y_train, y_train_pred)
 f1_train = f1_score(y_train, y_train_pred, average='weighted')
 print(f'Training Accuracy: {accuracy_train:.2f}')
 print(f'Training F1 Score: {f1_train:.2f}')
+#plot_tree(model)
+#plt.show()
+
+#Training Accuracy: 0.78
+#Training F1 Score: 0.70

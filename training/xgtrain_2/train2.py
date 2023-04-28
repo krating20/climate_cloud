@@ -54,3 +54,7 @@ accuracy_train = accuracy_score(y_train, y_train_pred)
 f1_train = f1_score(y_train, y_train_pred, average='weighted')
 print(f'Training Accuracy: {accuracy_train:.2f}')
 print(f'Training F1 Score: {f1_train:.2f}')
+
+
+#Training Accuracy: 0.78
+#Training F1 Score: 0.71
